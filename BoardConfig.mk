@@ -27,3 +27,22 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/n8000/bluetooth
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := c0,p4noterf,n8000,GT-N8000
+
+
+# Selinux
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/n8000/selinux
+
+BOARD_USE_SECTVOUT := false
+
+BOARD_SEPOLICY_UNION += \
+    device.te \
+    domain.te \
+    file.te \
+    file_contexts \
+    init.te \
+    mediaserver.te \
+    rild.te \
+    system.te \
+    ueventd.te \
+    wpa_supplicant.te
