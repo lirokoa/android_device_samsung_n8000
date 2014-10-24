@@ -33,6 +33,8 @@ TARGET_OTA_ASSERT_DEVICE := c0,p4noterf,n8000,GT-N8000
 BOARD_SEPOLICY_DIRS += \
     device/samsung/n8000/selinux
 
+BOARD_USE_SECTVOUT := false
+
 BOARD_SEPOLICY_UNION += \
     device.te \
     domain.te \
